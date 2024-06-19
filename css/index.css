@@ -1,0 +1,466 @@
+html{
+    height: 100%;
+    width: 100%;  
+    background-color: #FFF7F1;
+  }
+  
+  
+  body{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .header-photo {
+    width: 100%;
+    height: auto;
+}
+  header {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 0;
+      padding-right: 2cm;
+      background-color: #E72929;
+      color: rgb(10, 10, 10);
+      text-align: center;
+      
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+  
+    .logo {
+      justify-content: start;
+      height: 100px; 
+      width: auto; 
+      padding-left: 0.5cm;
+    }
+  
+    nav ul {
+      margin-right: 300;
+      padding: 0;
+      list-style: none;
+      font-family: 'Josefin Sans', sans-serif;
+      text-align: center;
+    
+    }
+    
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+      text-align: center;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      font-size: 20px;
+      position: relative;
+      padding-bottom: 5px;
+      margin-right: 20px;
+      transition: all 0.3s ease;
+    }
+    
+  
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: blue;
+      transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+      /* color: #AF8F6F; */
+      font-size: 22px; 
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+    .nav-links {
+      margin-left: 0; 
+      padding-left: 0; 
+      display: flex;
+      justify-content: flex-start; 
+    }
+  
+    .nav-links li {
+      margin-right: 20px;
+    }
+  
+    .menu-toggle {
+      color: #000;
+      float: right;
+      line-height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+  }
+  @media only screen and (max-width: 991px) {
+      header {
+          padding: 0 20px;
+      }
+      .menu-toggle {
+          display: block;
+      }
+      header nav{
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: #fff;
+        top: 0px;
+        left: -50%;
+        transition: 0.5s;
+      }
+    
+        header nav.active {
+          left: 0;
+      }
+  
+        header nav ul li{
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+        }
+        header nav ul li a{
+          display: block;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        }
+   
+        nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #eb93b6;
+      transition: all 0.3s ease;
+    }
+        
+      nav a:hover {
+        color: #000;
+      }
+  
+      nav a:hover::after {
+        width: 100%;
+      }
+  
+  }
+    
+  footer {
+    font-size: 10px;
+    text-align: center;
+    background-color: #E72929;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.logo-footer {
+    height: 100px; /* adjust the height as needed */
+    width: auto; /* maintain aspect ratio */
+}
+
+.newsletter {
+    margin-top: 0; /* Remove margin-top to align with the logo */
+}
+
+.newsletter-label {
+    display: block;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.newsletter-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-input {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 0; /* Remove margin-bottom to align with button */
+}
+
+.newsletter-button {
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: #4793AF;
+    color: #FFF7F1;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+    background-color: #47bfea;
+}
+
+
+  
+    img {
+      justify-content: start;
+      height: auto; /* adjust the height as needed */
+      max-width: 100%;/* maintain aspect ratio */
+    }
+  
+    .grid-container {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      height: auto; 
+      text-align: center;
+      width: 90%;
+  }
+
+  
+  .grid-item.paragraph {
+      max-width: 1000px; /* Optional: limit the width of the text block */
+      margin: 0 auto; /* Center the block within the container */
+  }
+  
+  
+
+    
+  
+    /* styles for smaller screens */
+  @media only screen and (max-width: 991px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      margin-left: 10px;
+    }
+  }
+    
+    .image {
+      text-align: center;
+    }
+    
+    .image img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .paragraph p {
+      line-height: 1.5;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 60px;
+      font-weight: bold;
+      color: #363434;
+    }
+  
+    .paragraph .manji{
+      font-size: 20px;
+      color: #6e6b6b;
+      font-weight: 200;
+    }
+  
+    .o-nama {
+      padding: 20px;
+      margin-left: 50px;
+      
+    }
+    .o-nama h1{
+      line-height: 1.5;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 35px;
+      font-weight: bold;
+      color: #363434;
+    }
+  
+    .o-nama p{
+      font-size: 20px;
+      color: #6e6b6b;
+      font-weight: 200;
+    }
+  
+    .grid-item-image2 img {
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+    }
+    .instagram{
+        max-width: 100%;
+        height: 50px;  
+    }
+    .instagram2 {
+      font-size: 5em;
+      margin-bottom: 40px;
+    }
+    a {
+      color: #363434;
+      text-decoration: none;
+    }
+  
+    .o-nama h1{
+      margin-top: 0cm;
+    }
+    .podnaslov {
+      margin-top: 0cm;
+      font-size: 30px;
+      font-weight: bold;
+      color: #363434;
+    }
+    
+    @media (max-width: 991px){
+      .grid-item-image2 img {
+        height: auto; /* adjust the height as needed */
+      max-width: 100%;/* maintain aspect ratio */
+      }
+  
+      .o-nama {
+        padding: 20px;
+        margin-left: 10px;
+      }
+  
+    }
+  
+    .videos-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Space between videos */
+      margin: 20px 0;
+  }
+  
+  .video-container {
+      flex: 1; /* Make the video containers flexible */
+      max-width: 45%; /* Maximum width for each video */
+      padding: 0; /* Remove padding to avoid extra space */
+      border: 3px solid #E72929;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      overflow: hidden; /* Ensure the iframe doesn't cause overflow */
+  }
+  
+  .video-container iframe {
+      width: 100%;
+      height: 315px; /* Height of the videos */
+      border: none;
+      margin: 0; /* Ensure there's no margin */
+      padding: 0; /* Ensure there's no padding */
+      display: block; /* Ensure it behaves as a block element */
+      border-radius: 10px; /* Keep the rounded corners */
+  }
+  .map-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #f7e8be;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+}
+
+.map-section h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #363434;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.map-section p {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #707070;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.map-container, .street-view-container {
+    margin-bottom: 20px;
+}
+
+.map-container iframe, .street-view-container iframe {
+    border: 2px solid #FF007F;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-section .map-container, .map-section .street-view-container {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #FFF7F1;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px; /* Maximum width of the modal */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Space between image and text */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the modal image */
+.modal-content img {
+  max-width: 50%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+/* Style for the text content */
+.modal-content .text-content {
+  max-width: 50%;
+  flex: 1; /* Allow text to take available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

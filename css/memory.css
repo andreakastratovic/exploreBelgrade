@@ -1,0 +1,67 @@
+#memory-game {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #E72929;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.memory-game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.memory-card {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.memory-card .front {
+    transform: rotateY(180deg);
+}
+
+.memory-card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(0deg);
+}
+
+.memory-card.flipped .front {
+    transform: rotateY(0deg);
+}
+
+.memory-card.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+
+#memory-retry {
+    padding: 10px 20px;
+    background-color: #4793AF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#memory-retry:hover {
+    background-color: #47bfea;
+}

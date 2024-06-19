@@ -1,0 +1,75 @@
+.attractions-title {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    color: #363434;
+}
+
+.box {
+    width: 300px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.slider-img {
+    height: 400px;
+    position: relative;
+}
+
+.slider-img img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.detail-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+
+.detail-box a {
+    text-decoration: none;
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+}
+
+.type a {
+    color: #363434;
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#autoWidth {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#autoWidth li {
+    flex: 1 1 200px; /* Flex items grow and shrink as needed */
+    margin: 10px;
+}
